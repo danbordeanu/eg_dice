@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+   <body>
+      <h1>You diced {{ what }}!</h1>
+      {% if what == 1 %}
+      <img src='/static/dice1.jpg'>
+      {%  elif what == 2 %}
+           <img src='/static/dice2.jpg'>
+      {% elif what == 3  %}
+           <img src='/static/dice3.jpg'>
+      {% elif what == 4  %}
+           <img src='/static/dice4.jpg'>
+      {% elif what == 5  %}
+           <img src='/static/dice5.jpg'>
+      {% elif what == 6  %}
+           <img src='/static/dice6.png'>
+      {% endif %}
+      {% if what <= 4 %}
+        <h1>Congratulations. The package passed the Quality gateway. You  successfully delivered the drug</h1>
+      {%  elif what == 5 %}
+          <h1>Unfortunately, the package didn’t pass the Quality gateway. Temperatures during transport have gone out of required levels.</h1>
+      {% else %}
+        <h1>Unfortunately, the package didn’t pass the Quality gateway. The package has been damaged during the transport :(</h1>
+      {%  endif %}
+   </body>
+</html>
